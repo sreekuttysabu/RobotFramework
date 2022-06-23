@@ -1,0 +1,606 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.10.4 on win32)" generated="20220623 13:58:21.110" rpa="false">
+<suite id="s1" name="OrangeDemo" source="D:\just\OrangeDemo">
+<suite id="s1-s1" name="TestSuite" source="D:\just\OrangeDemo\TestSuite">
+<suite id="s1-s1-s1" name="OrangeHrms" source="D:\just\OrangeDemo\TestSuite\OrangeHrms.robot">
+<test id="s1-s1-s1-t1" name="Set Screenshot Directory">
+<kw name="Set Screenshot Directory" library="SeleniumLibrary">
+<doc>Sets the directory for captured screenshots.</doc>
+<arguments>
+<arg>D:\just\OrangeDemo\Screenshots</arg>
+</arguments>
+<status status="PASS" starttime="20220623 13:58:21.398" endtime="20220623 13:58:21.398"></status>
+</kw>
+<status status="PASS" starttime="20220623 13:58:21.397" endtime="20220623 13:58:21.398" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-t2" name="Verify Login Page">
+<kw name="Open URL" library="LoginPage">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>https://opensource-demo.orangehrmlive.com/</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20220623 13:58:21.401" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/'.</msg>
+<status status="PASS" starttime="20220623 13:58:21.400" endtime="20220623 13:58:24.458"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220623 13:58:24.459" endtime="20220623 13:58:24.584"></status>
+</kw>
+<status status="PASS" starttime="20220623 13:58:21.399" endtime="20220623 13:58:24.585"></status>
+</kw>
+<kw name="Verify LoginPage" library="LoginPage">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>id=btnLogin</arg>
+</arguments>
+<msg timestamp="20220623 13:58:24.603" level="INFO">Current page contains element 'id=btnLogin'.</msg>
+<status status="PASS" starttime="20220623 13:58:24.586" endtime="20220623 13:58:24.603"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>id=logInPanelHeading</arg>
+<arg>LOGIN Panel</arg>
+</arguments>
+<msg timestamp="20220623 13:58:24.604" level="INFO">Verifying element 'id=logInPanelHeading' contains exact text 'LOGIN Panel'.</msg>
+<status status="PASS" starttime="20220623 13:58:24.603" endtime="20220623 13:58:24.636"></status>
+</kw>
+<status status="PASS" starttime="20220623 13:58:24.586" endtime="20220623 13:58:24.636"></status>
+</kw>
+<kw name="Login to application" library="LoginPage">
+<arguments>
+<arg>Admin</arg>
+<arg>admin123</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=txtUsername</arg>
+<arg>${UserName}</arg>
+</arguments>
+<msg timestamp="20220623 13:58:24.637" level="INFO">Typing text 'Admin' into text field 'id=txtUsername'.</msg>
+<status status="PASS" starttime="20220623 13:58:24.636" endtime="20220623 13:58:24.755"></status>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=txtPassword</arg>
+<arg>${password }</arg>
+</arguments>
+<msg timestamp="20220623 13:58:24.756" level="INFO">Typing password into text field 'id=txtPassword'.</msg>
+<msg timestamp="20220623 13:58:24.785" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220623 13:58:24.824" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220623 13:58:24.756" endtime="20220623 13:58:24.824"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>id=btnLogin</arg>
+</arguments>
+<msg timestamp="20220623 13:58:24.825" level="INFO">Clicking button 'id=btnLogin'.</msg>
+<status status="PASS" starttime="20220623 13:58:24.824" endtime="20220623 13:58:27.542"></status>
+</kw>
+<status status="PASS" starttime="20220623 13:58:24.636" endtime="20220623 13:58:27.542"></status>
+</kw>
+<status status="PASS" starttime="20220623 13:58:21.398" endtime="20220623 13:58:27.542" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-t3" name="Verify Home Page">
+<kw name="Verify HeaderElements" library="HomePage">
+<kw name="Get WebElements" library="SeleniumLibrary">
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<arguments>
+<arg>xpath=//a[@class='firstLevelMenu']//b</arg>
+</arguments>
+<assign>
+<var>@{Headers}</var>
+</assign>
+<msg timestamp="20220623 13:58:27.572" level="INFO">@{Headers} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="9893489effb71b71c230c8b3cb9c10b7", element="964f6d84-566b-4817-b6bd-d527ebe06255")&gt; | &lt;selenium.webdriver.remote.webelement.WebElement (ses...</msg>
+<status status="PASS" starttime="20220623 13:58:27.547" endtime="20220623 13:58:27.573"></status>
+</kw>
+<kw name="${Jan} IN [ @{Headers} ]" type="for">
+<kw name="${Jan} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;9893489effb71b71c230c8b3cb9c10b7&quot;, element=&quot;964f6d84-566b-4817-b6bd-d527ebe06255&quot;)&gt;" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Jan}</arg>
+</arguments>
+<assign>
+<var>${text}</var>
+</assign>
+<msg timestamp="20220623 13:58:27.588" level="INFO">${text} = Admin</msg>
+<status status="PASS" starttime="20220623 13:58:27.574" endtime="20220623 13:58:27.588"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${text}</arg>
+</arguments>
+<msg timestamp="20220623 13:58:27.588" level="INFO">Admin</msg>
+<status status="PASS" starttime="20220623 13:58:27.588" endtime="20220623 13:58:27.589"></status>
+</kw>
+<status status="PASS" starttime="20220623 13:58:27.574" endtime="20220623 13:58:27.589"></status>
+</kw>
+<kw name="${Jan} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;9893489effb71b71c230c8b3cb9c10b7&quot;, element=&quot;08a63036-38a9-4c27-adbd-b7ad41b4b7e5&quot;)&gt;" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Jan}</arg>
+</arguments>
+<assign>
+<var>${text}</var>
+</assign>
+<msg timestamp="20220623 13:58:27.602" level="INFO">${text} = PIM</msg>
+<status status="PASS" starttime="20220623 13:58:27.589" endtime="20220623 13:58:27.602"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${text}</arg>
+</arguments>
+<msg timestamp="20220623 13:58:27.603" level="INFO">PIM</msg>
+<status status="PASS" starttime="20220623 13:58:27.603" endtime="20220623 13:58:27.603"></status>
+</kw>
+<status status="PASS" starttime="20220623 13:58:27.589" endtime="20220623 13:58:27.603"></status>
+</kw>
+<kw name="${Jan} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;9893489effb71b71c230c8b3cb9c10b7&quot;, element=&quot;c99f32a5-de62-4400-8005-8996627fb722&quot;)&gt;" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Jan}</arg>
+</arguments>
+<assign>
+<var>${text}</var>
+</assign>
+<msg timestamp="20220623 13:58:27.618" level="INFO">${text} = Leave</msg>
+<status status="PASS" starttime="20220623 13:58:27.603" endtime="20220623 13:58:27.618"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${text}</arg>
+</arguments>
+<msg timestamp="20220623 13:58:27.618" level="INFO">Leave</msg>
+<status status="PASS" starttime="20220623 13:58:27.618" endtime="20220623 13:58:27.618"></status>
+</kw>
+<status status="PASS" starttime="20220623 13:58:27.603" endtime="20220623 13:58:27.619"></status>
+</kw>
+<kw name="${Jan} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;9893489effb71b71c230c8b3cb9c10b7&quot;, element=&quot;d6f517bb-49da-477d-a488-a5b8147115c2&quot;)&gt;" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Jan}</arg>
+</arguments>
+<assign>
+<var>${text}</var>
+</assign>
+<msg timestamp="20220623 13:58:27.632" level="INFO">${text} = Time</msg>
+<status status="PASS" starttime="20220623 13:58:27.619" endtime="20220623 13:58:27.632"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${text}</arg>
+</arguments>
+<msg timestamp="20220623 13:58:27.633" level="INFO">Time</msg>
+<status status="PASS" starttime="20220623 13:58:27.632" endtime="20220623 13:58:27.633"></status>
+</kw>
+<status status="PASS" starttime="20220623 13:58:27.619" endtime="20220623 13:58:27.633"></status>
+</kw>
+<kw name="${Jan} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;9893489effb71b71c230c8b3cb9c10b7&quot;, element=&quot;48e382f3-29c3-43b7-9543-355ee50a82bf&quot;)&gt;" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Jan}</arg>
+</arguments>
+<assign>
+<var>${text}</var>
+</assign>
+<msg timestamp="20220623 13:58:27.647" level="INFO">${text} = Recruitment</msg>
+<status status="PASS" starttime="20220623 13:58:27.633" endtime="20220623 13:58:27.647"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${text}</arg>
+</arguments>
+<msg timestamp="20220623 13:58:27.647" level="INFO">Recruitment</msg>
+<status status="PASS" starttime="20220623 13:58:27.647" endtime="20220623 13:58:27.647"></status>
+</kw>
+<status status="PASS" starttime="20220623 13:58:27.633" endtime="20220623 13:58:27.647"></status>
+</kw>
+<kw name="${Jan} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;9893489effb71b71c230c8b3cb9c10b7&quot;, element=&quot;ec20b164-9345-4d41-97b6-3cbbad24e35f&quot;)&gt;" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Jan}</arg>
+</arguments>
+<assign>
+<var>${text}</var>
+</assign>
+<msg timestamp="20220623 13:58:27.661" level="INFO">${text} = My Info</msg>
+<status status="PASS" starttime="20220623 13:58:27.647" endtime="20220623 13:58:27.661"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${text}</arg>
+</arguments>
+<msg timestamp="20220623 13:58:27.662" level="INFO">My Info</msg>
+<status status="PASS" starttime="20220623 13:58:27.662" endtime="20220623 13:58:27.662"></status>
+</kw>
+<status status="PASS" starttime="20220623 13:58:27.647" endtime="20220623 13:58:27.662"></status>
+</kw>
+<kw name="${Jan} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;9893489effb71b71c230c8b3cb9c10b7&quot;, element=&quot;1d13fad3-be65-44f0-b0f4-a72dabb66f5e&quot;)&gt;" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Jan}</arg>
+</arguments>
+<assign>
+<var>${text}</var>
+</assign>
+<msg timestamp="20220623 13:58:27.677" level="INFO">${text} = Performance</msg>
+<status status="PASS" starttime="20220623 13:58:27.663" endtime="20220623 13:58:27.677"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${text}</arg>
+</arguments>
+<msg timestamp="20220623 13:58:27.679" level="INFO">Performance</msg>
+<status status="PASS" starttime="20220623 13:58:27.677" endtime="20220623 13:58:27.679"></status>
+</kw>
+<status status="PASS" starttime="20220623 13:58:27.663" endtime="20220623 13:58:27.679"></status>
+</kw>
+<kw name="${Jan} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;9893489effb71b71c230c8b3cb9c10b7&quot;, element=&quot;f01c063e-4d94-43c6-83b7-fd04998280ea&quot;)&gt;" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Jan}</arg>
+</arguments>
+<assign>
+<var>${text}</var>
+</assign>
+<msg timestamp="20220623 13:58:27.696" level="INFO">${text} = Dashboard</msg>
+<status status="PASS" starttime="20220623 13:58:27.679" endtime="20220623 13:58:27.696"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${text}</arg>
+</arguments>
+<msg timestamp="20220623 13:58:27.697" level="INFO">Dashboard</msg>
+<status status="PASS" starttime="20220623 13:58:27.696" endtime="20220623 13:58:27.697"></status>
+</kw>
+<status status="PASS" starttime="20220623 13:58:27.679" endtime="20220623 13:58:27.697"></status>
+</kw>
+<kw name="${Jan} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;9893489effb71b71c230c8b3cb9c10b7&quot;, element=&quot;49e1f736-b64f-4dee-be10-4ca3934057cc&quot;)&gt;" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Jan}</arg>
+</arguments>
+<assign>
+<var>${text}</var>
+</assign>
+<msg timestamp="20220623 13:58:27.714" level="INFO">${text} = Maintenance</msg>
+<status status="PASS" starttime="20220623 13:58:27.698" endtime="20220623 13:58:27.714"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${text}</arg>
+</arguments>
+<msg timestamp="20220623 13:58:27.714" level="INFO">Maintenance</msg>
+<status status="PASS" starttime="20220623 13:58:27.714" endtime="20220623 13:58:27.714"></status>
+</kw>
+<status status="PASS" starttime="20220623 13:58:27.697" endtime="20220623 13:58:27.714"></status>
+</kw>
+<kw name="${Jan} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;9893489effb71b71c230c8b3cb9c10b7&quot;, element=&quot;0da353b8-fbc7-4098-bb95-39d16ed263ae&quot;)&gt;" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Jan}</arg>
+</arguments>
+<assign>
+<var>${text}</var>
+</assign>
+<msg timestamp="20220623 13:58:27.730" level="INFO">${text} = Buzz</msg>
+<status status="PASS" starttime="20220623 13:58:27.715" endtime="20220623 13:58:27.730"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${text}</arg>
+</arguments>
+<msg timestamp="20220623 13:58:27.731" level="INFO">Buzz</msg>
+<status status="PASS" starttime="20220623 13:58:27.730" endtime="20220623 13:58:27.731"></status>
+</kw>
+<status status="PASS" starttime="20220623 13:58:27.715" endtime="20220623 13:58:27.731"></status>
+</kw>
+<status status="PASS" starttime="20220623 13:58:27.573" endtime="20220623 13:58:27.731"></status>
+</kw>
+<status status="PASS" starttime="20220623 13:58:27.545" endtime="20220623 13:58:27.731"></status>
+</kw>
+<status status="PASS" starttime="20220623 13:58:27.544" endtime="20220623 13:58:27.731" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-t4" name="Verify admin page">
+<kw name="Go To Admin page" library="AdminPage">
+<arguments>
+<arg>adash</arg>
+<arg>ESS</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//b[text()='Admin']</arg>
+</arguments>
+<msg timestamp="20220623 13:58:27.733" level="INFO">Clicking element 'xpath=//b[text()='Admin']'.</msg>
+<status status="PASS" starttime="20220623 13:58:27.732" endtime="20220623 13:58:28.910"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=searchSystemUser_userName</arg>
+<arg>${Username}</arg>
+</arguments>
+<msg timestamp="20220623 13:58:28.915" level="INFO">Typing text 'adash' into text field 'id=searchSystemUser_userName'.</msg>
+<status status="PASS" starttime="20220623 13:58:28.913" endtime="20220623 13:58:29.024"></status>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<arguments>
+<arg>id=searchSystemUser_userType</arg>
+<arg>${Role}</arg>
+</arguments>
+<msg timestamp="20220623 13:58:29.024" level="INFO">Selecting options from selection list 'id=searchSystemUser_userType' by label ESS.</msg>
+<status status="PASS" starttime="20220623 13:58:29.024" endtime="20220623 13:58:29.117"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>id=searchBtn</arg>
+</arguments>
+<msg timestamp="20220623 13:58:29.118" level="INFO">Clicking button 'id=searchBtn'.</msg>
+<status status="PASS" starttime="20220623 13:58:29.118" endtime="20220623 13:58:29.602"></status>
+</kw>
+<status status="PASS" starttime="20220623 13:58:27.732" endtime="20220623 13:58:29.602"></status>
+</kw>
+<kw name="Locate User" library="AdminPage">
+<arguments>
+<arg>adash</arg>
+</arguments>
+<kw name="Page Should Contain Checkbox" library="SeleniumLibrary">
+<doc>Verifies checkbox ``locator`` is found from the current page.</doc>
+<arguments>
+<arg>xpath=//a[text()='${Username}']/preceding::td/input[@type='checkbox']</arg>
+</arguments>
+<msg timestamp="20220623 13:58:29.650" level="INFO">Current page contains checkbox 'xpath=//a[text()='adash']/preceding::td/input[@type='checkbox']'.</msg>
+<status status="PASS" starttime="20220623 13:58:29.605" endtime="20220623 13:58:29.651"></status>
+</kw>
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//a[text()='${Username}']/preceding::td/input[@type='checkbox']</arg>
+</arguments>
+<msg timestamp="20220623 13:58:29.651" level="INFO">Selecting checkbox 'xpath=//a[text()='adash']/preceding::td/input[@type='checkbox']'.</msg>
+<status status="PASS" starttime="20220623 13:58:29.651" endtime="20220623 13:58:29.711"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id=resetBtn</arg>
+</arguments>
+<msg timestamp="20220623 13:58:29.711" level="INFO">Clicking element 'id=resetBtn'.</msg>
+<status status="PASS" starttime="20220623 13:58:29.711" endtime="20220623 13:58:30.360"></status>
+</kw>
+<status status="PASS" starttime="20220623 13:58:29.604" endtime="20220623 13:58:30.364"></status>
+</kw>
+<kw name="Go to Job" library="AdminPage">
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>id=menu_admin_Job</arg>
+</arguments>
+<msg timestamp="20220623 13:58:30.366" level="INFO">Simulating Mouse Over on element 'id=menu_admin_Job'.</msg>
+<status status="PASS" starttime="20220623 13:58:30.366" endtime="20220623 13:58:30.667"></status>
+</kw>
+<status status="PASS" starttime="20220623 13:58:30.365" endtime="20220623 13:58:30.667"></status>
+</kw>
+<status status="PASS" starttime="20220623 13:58:27.731" endtime="20220623 13:58:30.668" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-t5" name="Verify recruitment">
+<kw name="Go To Recruitment" library="Recruitment">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//b[text()='Recruitment']</arg>
+</arguments>
+<msg timestamp="20220623 13:58:30.671" level="INFO">Clicking element 'xpath=//b[text()='Recruitment']'.</msg>
+<status status="PASS" starttime="20220623 13:58:30.671" endtime="20220623 13:58:31.667"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>4</arg>
+</arguments>
+<msg timestamp="20220623 13:58:35.674" level="INFO">Slept 4 seconds</msg>
+<status status="PASS" starttime="20220623 13:58:31.667" endtime="20220623 13:58:35.674"></status>
+</kw>
+<status status="PASS" starttime="20220623 13:58:30.671" endtime="20220623 13:58:35.674"></status>
+</kw>
+<kw name="Select data from datepicker" library="Recruitment">
+<arguments>
+<arg>2018</arg>
+<arg>Aug</arg>
+<arg>30</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id=candidateSearch_fromDate</arg>
+</arguments>
+<msg timestamp="20220623 13:58:35.676" level="INFO">Clicking element 'id=candidateSearch_fromDate'.</msg>
+<status status="PASS" starttime="20220623 13:58:35.675" endtime="20220623 13:58:35.753"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20220623 13:58:38.759" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220623 13:58:35.754" endtime="20220623 13:58:38.760"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//a[@data-event='click']//span</arg>
+</arguments>
+<msg timestamp="20220623 13:58:38.762" level="INFO">Clicking element 'xpath=//a[@data-event='click']//span'.</msg>
+<status status="PASS" starttime="20220623 13:58:38.761" endtime="20220623 13:58:38.841"></status>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<arguments>
+<arg>//*[@class='ui-datepicker-year']</arg>
+<arg>${Year}</arg>
+</arguments>
+<msg timestamp="20220623 13:58:38.842" level="INFO">Selecting options from selection list '//*[@class='ui-datepicker-year']' by value 2018.</msg>
+<status status="PASS" starttime="20220623 13:58:38.842" endtime="20220623 13:58:38.934"></status>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<arguments>
+<arg>//*[@class='ui-datepicker-month']</arg>
+<arg>${Month}</arg>
+</arguments>
+<msg timestamp="20220623 13:58:38.935" level="INFO">Selecting options from selection list '//*[@class='ui-datepicker-month']' by label Aug.</msg>
+<status status="PASS" starttime="20220623 13:58:38.934" endtime="20220623 13:58:39.031"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>link:${Date}</arg>
+</arguments>
+<msg timestamp="20220623 13:58:39.033" level="INFO">Clicking link 'link:30'.</msg>
+<status status="PASS" starttime="20220623 13:58:39.032" endtime="20220623 13:58:39.118"></status>
+</kw>
+<status status="PASS" starttime="20220623 13:58:35.674" endtime="20220623 13:58:39.119"></status>
+</kw>
+<status status="PASS" starttime="20220623 13:58:30.669" endtime="20220623 13:58:39.119" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-t6" name="Upload Photo">
+<kw name="Naviaget my info" library="MyInfo">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id=menu_pim_viewMyDetails</arg>
+</arguments>
+<msg timestamp="20220623 13:58:39.122" level="INFO">Clicking element 'id=menu_pim_viewMyDetails'.</msg>
+<status status="PASS" starttime="20220623 13:58:39.121" endtime="20220623 13:58:40.023"></status>
+</kw>
+<status status="PASS" starttime="20220623 13:58:39.121" endtime="20220623 13:58:40.024"></status>
+</kw>
+<kw name="upload image" library="MyInfo">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//a[@href='/index.php/pim/viewPhotograph/empNumber/7']//img[1]</arg>
+</arguments>
+<msg timestamp="20220623 13:58:40.026" level="INFO">Clicking element 'xpath=//a[@href='/index.php/pim/viewPhotograph/empNumber/7']//img[1]'.</msg>
+<status status="PASS" starttime="20220623 13:58:40.025" endtime="20220623 13:58:40.572"></status>
+</kw>
+<kw name="Choose File" library="SeleniumLibrary">
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<arguments>
+<arg>id=photofile</arg>
+<arg>C:/Users/Sreek/Downloads/Sandeep Sankar copy.jpg</arg>
+</arguments>
+<msg timestamp="20220623 13:58:40.577" level="INFO">Sending C:\Users\Sreek\Downloads\Sandeep Sankar copy.jpg to browser.</msg>
+<status status="PASS" starttime="20220623 13:58:40.575" endtime="20220623 13:58:40.643"></status>
+</kw>
+<status status="PASS" starttime="20220623 13:58:40.024" endtime="20220623 13:58:40.643"></status>
+</kw>
+<kw name="Edit Button" library="MyInfo">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="sidenav"]/li[1]/a</arg>
+</arguments>
+<msg timestamp="20220623 13:58:40.646" level="INFO">Clicking element 'xpath=//*[@id="sidenav"]/li[1]/a'.</msg>
+<status status="PASS" starttime="20220623 13:58:40.645" endtime="20220623 13:58:41.357"></status>
+</kw>
+<kw name="Check Enabled" library="MyInfo">
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<arguments>
+<arg>id=btnSave</arg>
+</arguments>
+<assign>
+<var>${Val}</var>
+</assign>
+<msg timestamp="20220623 13:58:41.402" level="INFO">${Val} = None</msg>
+<status status="PASS" starttime="20220623 13:58:41.359" endtime="20220623 13:58:41.403"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${Val} == None</arg>
+<arg>NewTest</arg>
+</arguments>
+<kw name=" NewTest" library="MyInfo">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>sreekutty</arg>
+</arguments>
+<assign>
+<var>${sucess}</var>
+</assign>
+<msg timestamp="20220623 13:58:41.406" level="INFO">${sucess} = sreekutty</msg>
+<status status="PASS" starttime="20220623 13:58:41.405" endtime="20220623 13:58:41.406"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${sucess}</arg>
+</arguments>
+<msg timestamp="20220623 13:58:41.407" level="INFO">sreekutty</msg>
+<status status="PASS" starttime="20220623 13:58:41.406" endtime="20220623 13:58:41.407"></status>
+</kw>
+<status status="PASS" starttime="20220623 13:58:41.404" endtime="20220623 13:58:41.408"></status>
+</kw>
+<status status="PASS" starttime="20220623 13:58:41.404" endtime="20220623 13:58:41.408"></status>
+</kw>
+<status status="PASS" starttime="20220623 13:58:41.357" endtime="20220623 13:58:41.409"></status>
+</kw>
+<status status="PASS" starttime="20220623 13:58:40.644" endtime="20220623 13:58:41.409"></status>
+</kw>
+<status status="PASS" starttime="20220623 13:58:39.119" endtime="20220623 13:58:41.410" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20220623 13:58:21.177" endtime="20220623 13:58:41.411"></status>
+</suite>
+<status status="PASS" starttime="20220623 13:58:21.174" endtime="20220623 13:58:41.417"></status>
+</suite>
+<status status="PASS" starttime="20220623 13:58:21.158" endtime="20220623 13:58:41.422"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="6" fail="0">Critical Tests</stat>
+<stat pass="6" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="6" fail="0" id="s1" name="OrangeDemo">OrangeDemo</stat>
+<stat pass="6" fail="0" id="s1-s1" name="TestSuite">OrangeDemo.TestSuite</stat>
+<stat pass="6" fail="0" id="s1-s1-s1" name="OrangeHrms">OrangeDemo.TestSuite.OrangeHrms</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20220623 13:58:21.389" level="ERROR">Error in file 'D:\just\OrangeDemo\ResourceFiles\HomePage.robot' on line 22: Invalid variable name ' @{Ele}'.</msg>
+</errors>
+</robot>
