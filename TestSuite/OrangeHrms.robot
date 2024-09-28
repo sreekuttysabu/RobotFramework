@@ -19,7 +19,7 @@ Verify Home Page
 Verify admin page 
     AdminPage.Go To Admin page    adash    ESS 
     AdminPage.Locate User    adash
-    AdminPage.Go to Job
+    AdminPage.Go to Job____new
     
 Verify recruitment
     Recruitment.Go To Recruitment
