@@ -27,5 +27,5 @@ Verify recruitment
 Upload Photo
     MyInfo.Naviaget my info 
     MyInfo.upload image
-    MyInfo.Edit Button
+    MyInfo.Edit Buttonsss
    
